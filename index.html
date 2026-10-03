@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked - Home</title>
+    <link rel="icon" type="image/png" href="icon.png" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. FIXED TOP TOOLBAR -->
+    <nav class="top-toolbar">
+        <a href="index.html" class="active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Home</span>
+        </a>
+        <a href="explore.html">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span>Explore</span>
+        </a>
+        <a href="bookings.html">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Bookings</span>
+        </a>
+        <a href="saved.html">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <span>Saved</span>
+        </a>
+        <a href="rewards.html">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>Rewards</span>
+        </a>
+        <a href="profile.html">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <header class="hero-section">
+        <div class="hero-top-bar">
+            <div class="user-profile-badge">
+                <img src="profile.photo.png" alt="User" class="avatar">
+                <div class="user-info">
+                    <span class="user-name">Hey, Diamond</span>
+                    <span class="user-points">⭐ 425 pts</span>
+                </div>
+            </div>
+            
+            <div class="hero-actions">
+                <img src="mainlogo.png" alt="Booked Logo" class="top-bar-logo">
+                <button class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></button>
+                <button class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <h2>Discover the people and places that help you <span>feel your best.</span></h2>
+        </div>
+
+        <div class="search-container">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" placeholder="Search for restaurants, barbers, salons...">
+            <button class="search-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- FLASH DEALS -->
+        <section class="section-block">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <span class="flash-icon">⚡</span>
+                    <h3 class="section-title flash-deals-title">Flash Deals</h3>
+                    <span class="section-subtitle">Limited time. Big savings.</span>
+                </div>
+                <a href="explore.html" class="see-all">See All ></a>
+            </div>
+            <div class="scroll-x">
+                <a href="business.html" class="deal-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Barbershop">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header-row"><h4>The Cut Barbershop</h4><span class="distance">📍 1.1 mi</span></div>
+                        <p class="service-name">Signature Cut</p>
+                        <div class="price-row">
+                            <div class="price-group"><span class="price">$29</span><span class="old-price">$45</span></div>
+                            <span class="timer">⏱ 2h 18m left</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="business.html" class="deal-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Nails">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header-row"><h4>Nail Luxe</h4><span class="distance">📍 1.8 mi</span></div>
+                        <p class="service-name">Gel Manicure</p>
+                        <div class="price-row">
+                            <div class="price-group"><span class="price">$40</span><span class="old-price">$65</span></div>
+                            <span class="timer">⏱ 3h 12m left</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- BOOK SOMETHING (Light Blue Title) -->
+        <section class="section-block">
+            <div class="section-header"><h3 class="section-title light-blue-title">Book Something</h3></div>
+            <div class="category-grid">
+                <a href="category.html?type=restaurants" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Restaurants">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">🍽️</span><span class="cat-arrow">></span></div>
+                        <h4>RESTAURANTS</h4><p>Great food. Good vibes.</p>
+                    </div>
+                </a>
+                <a href="category.html?type=barbershops" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=500&q=80" alt="Barber Shops">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">✂️</span><span class="cat-arrow">></span></div>
+                        <h4>BARBER SHOPS</h4><p>Look good. Feel good.</p>
+                    </div>
+                </a>
+                <a href="category.html?type=nailsalons" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Nail Salons">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">💅</span><span class="cat-arrow">></span></div>
+                        <h4>NAIL SALONS</h4><p>Nails. Beauty. Confidence.</p>
+                    </div>
+                </a>
+                <a href="category.html?type=fitness" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">🏋️</span><span class="cat-arrow">></span></div>
+                        <h4>FITNESS</h4><p>Stronger. Healthier. You.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- POPULAR NEAR YOU (Purple Title) -->
+        <section class="section-block">
+            <div class="section-header">
+                <h3 class="section-title purple-title">Popular Near You</h3>
+                <a href="explore.html" class="see-all">See All ></a>
+            </div>
+            <div class="scroll-x">
+                <a href="business.html" class="popular-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Barbershop">
+                        <button class="heart-btn">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h4>The Cut Barbershop</h4><p class="category-label">Barber Shop</p>
+                        <div class="meta-row"><span class="rating">⭐ 4.8 (1.2k)</span><span class="distance">📍 1.1 mi</span></div>
+                    </div>
+                </a>
+                <a href="business.html" class="popular-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Nails">
+                        <button class="heart-btn">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h4>Nails by Luxe</h4><p class="category-label">Nail Salon</p>
+                        <div class="meta-row"><span class="rating">⭐ 4.7 (642)</span><span class="distance">📍 1.8 mi</span></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER BANNER -->
+        <div class="footer-banner">
+            <h2>Make time for what matters.</h2>
+            <p>Find it. Choose it. <span class="white-text">Book it.</span></p>
+            <p class="discover-text">Discover something new.</p>
+        </div>
+    </main>
+
+    <!-- VIBE CHAT BUTTON -->
+    <button class="vibe-chat-btn" id="vibeChatBtn"><span class="chat-icon">💬</span><span>Vibe Chat</span></button>
+
+    <!-- VIBE CHAT MODAL (Hidden by default) -->
+    <div class="chat-modal" id="chatModal">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>Vibe Chat</h3>
+                <button class="close-chat" id="closeChatBtn">✕</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai-message">Hi Diamond! I'm your Vibe assistant. How can I help you today? You can ask me to book an appointment, check your bookings, or find deals.</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ask me to book an appointment...">
+                <button id="sendChatBtn">➔</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
