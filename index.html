@@ -38,7 +38,7 @@
     </nav>
 
     <!-- 2. HERO SECTION -->
-    <header class="hero-section">
+    <header class="hero-section" style="background-image: linear-gradient(180deg, rgba(6, 6, 11, 0.2) 0%, rgba(6, 6, 11, 0.8) 70%, rgba(6, 6, 11, 1) 100%), url('asset1.png');">
         <div class="hero-top-bar">
             <div class="user-profile-badge">
                 <img src="profile.photo.png" alt="User" class="avatar">
@@ -56,6 +56,11 @@
         </div>
 
         <div class="hero-content">
+            <!-- NEW HERO TEXT OVERLAY -->
+            <div class="hero-center-text">
+                <h3>FIND WHAT MOVES YOU.</h3>
+                <p>Discover something new.</p>
+            </div>
             <h2>Discover the people and places that help you <span>feel your best.</span></h2>
         </div>
 
@@ -67,11 +72,11 @@
     </header>
 
     <main>
-        <!-- FLASH DEALS -->
+        <!-- FLASH DEALS (Purple Lightning Bolt, Red Title) -->
         <section class="section-block">
             <div class="section-header">
                 <div class="section-title-group">
-                    <span class="flash-icon">⚡</span>
+                    <span class="flash-icon purple-bolt">⚡</span>
                     <h3 class="section-title flash-deals-title">Flash Deals</h3>
                     <span class="section-subtitle">Limited time. Big savings.</span>
                 </div>
@@ -175,7 +180,12 @@
         <!-- FOOTER BANNER -->
         <div class="footer-banner">
             <h2>Make time for what matters.</h2>
-            <p>Find it. Choose it. <span class="white-text">Book it.</span></p>
+            <p>
+                <span class="find-text">Find it.</span> 
+                <span class="choose-text">Choose it.</span> 
+                <span class="book-text">Book it.</span>
+            </p>
+            <p class="real-people-text">Real People. <span class="real-services">Real Services.</span> <span class="real-time">Real Time.</span></p>
             <p class="discover-text">Discover something new.</p>
         </div>
     </main>
@@ -183,7 +193,7 @@
     <!-- VIBE CHAT BUTTON -->
     <button class="vibe-chat-btn" id="vibeChatBtn"><span class="chat-icon">💬</span><span>Vibe Chat</span></button>
 
-    <!-- VIBE CHAT MODAL (Hidden by default) -->
+    <!-- VIBE CHAT MODAL -->
     <div class="chat-modal" id="chatModal">
         <div class="chat-container">
             <div class="chat-header">
@@ -200,6 +210,8 @@
         </div>
     </div>
 
+    <script src="state.js"></script>
+    <script src="router.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
