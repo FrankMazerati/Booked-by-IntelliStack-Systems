@@ -9,28 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (signupForm) {
         signupForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
             const name = document.getElementById('signupName').value;
             const email = document.getElementById('signupEmail').value;
             const phone = document.getElementById('signupPhone').value;
             const type = document.querySelector('input[name="userType"]:checked').value;
 
-            // Create a fresh user object with 0 points and a default avatar
             const newUser = {
-                name: name,
-                email: email,
-                phone: phone,
-                points: 0,
-                avatar: 'profile.photo.png', // Default avatar
-                type: type,
-                bookings: []
+                name: name, email: email, phone: phone, points: 0,
+                avatar: 'profile.photo.png', type: type, bookings: []
             };
 
-            // Save to localStorage
             localStorage.setItem('bookedUser', JSON.stringify(newUser));
-            
             alert("Account created successfully!");
-            window.location.href = "profile.html"; // Redirect to their fresh profile
+            window.location.href = "profile.html";
         });
     }
 
@@ -40,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const email = document.getElementById('loginEmail').value;
-            
             const savedUser = localStorage.getItem('bookedUser');
             if (savedUser) {
                 const user = JSON.parse(savedUser);
@@ -55,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- PROFILE PAGE LOGIC (Load Data & Upload Photo) ---
+    // --- PROFILE PAGE LOGIC ---
     const profileName = document.getElementById('profileName');
     const profilePoints = document.getElementById('profilePoints');
     const profileAvatar = document.getElementById('profileAvatar');
@@ -65,21 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedUser = localStorage.getItem('bookedUser');
         if (savedUser) {
             const user = JSON.parse(savedUser);
-            
-            // Populate the page with the user's data
             profileName.innerText = user.name;
             profilePoints.innerText = user.points + " pts";
-            
-            if (user.avatar) {
-                profileAvatar.src = user.avatar;
-            }
+            if (user.avatar) profileAvatar.src = user.avatar;
         } else {
-            // If no user is logged in, kick them back to login
             window.location.href = "login.html";
         }
     }
 
-    // Handle Photo Upload
     if (avatarUpload) {
         avatarUpload.addEventListener('change', function(e) {
             const file = e.target.files[0];
@@ -87,11 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const reader = new FileReader();
                 reader.onload = function(event) {
                     const base64Image = event.target.result;
-                    
-                    // Update the image on the screen instantly
                     profileAvatar.src = base64Image;
-                    
-                    // Save the new image to localStorage
                     const savedUser = localStorage.getItem('bookedUser');
                     if (savedUser) {
                         const user = JSON.parse(savedUser);
@@ -148,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = chatInput.value.trim();
         if (text === '') return;
 
-        // 1. Add User Message
         const userMsgDiv = document.createElement('div');
         userMsgDiv.classList.add('message', 'user-message');
         userMsgDiv.innerText = text;
@@ -156,11 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
         chatInput.value = '';
         chatMessages.scrollTop = chatMessages.scrollHeight;
 
-        // 2. Simulate AI Thinking & Response
         setTimeout(() => {
             const aiMsgDiv = document.createElement('div');
             aiMsgDiv.classList.add('message', 'ai-message');
-            
             const lowerText = text.toLowerCase();
             
             if (lowerText.includes('book') || lowerText.includes('appointment')) {
@@ -178,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 aiMsgDiv.innerText = "I'm not sure I understand. Try asking me to 'book a haircut', 'show my appointments', or 'find deals'.";
             }
-
             chatMessages.appendChild(aiMsgDiv);
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }, 1000); 
@@ -197,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e) => {
             e.preventDefault(); 
             e.stopPropagation();
-            
             if (btn.innerHTML === '♡') {
                 btn.innerHTML = '♥';
                 btn.style.color = '#d946ef'; 
@@ -207,5 +181,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
 });
