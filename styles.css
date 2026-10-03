@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Road+Rage&display=swap');
 
 :root {
     --bg-dark: #06060B; --bg-panel: rgba(13, 13, 20, 0.85); --bg-input: rgba(26, 26, 36, 0.8);
@@ -7,6 +7,7 @@
     --text-main: #ffffff; --text-muted: #888899; --text-dark: #666677;
     --glow-red: 0 0 15px rgba(255, 0, 60, 0.6); --glow-pink: 0 0 15px rgba(217, 70, 239, 0.4);
     --glow-blue: 0 0 15px rgba(0, 229, 255, 0.3); --font-main: 'Outfit', sans-serif;
+    --font-display: 'Road Rage', cursive;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,7 +26,7 @@ img { max-width: 100%; display: block; }
 .scroll-x::-webkit-scrollbar { display: none; }
 .scroll-x { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* TOP TOOLBAR (UPDATED WITH GLOWING PILLS) */
+/* TOP TOOLBAR */
 .top-toolbar {
     position: fixed; top: 0; left: 0; width: 100%; height: 65px;
     background-color: rgba(6, 6, 11, 0.95); backdrop-filter: blur(10px);
@@ -39,10 +40,7 @@ img { max-width: 100%; display: block; }
     transition: all 0.3s ease; text-decoration: none;
     padding: 6px 12px; border-radius: 12px;
 }
-.top-toolbar a i {
-    font-size: 20px;
-    transition: all 0.3s ease;
-}
+.top-toolbar a i { font-size: 20px; transition: all 0.3s ease; }
 .top-toolbar a.active {
     background: rgba(0, 229, 255, 0.1);
     border: 1px solid rgba(0, 229, 255, 0.3);
@@ -53,22 +51,18 @@ img { max-width: 100%; display: block; }
     filter: drop-shadow(0 0 8px var(--neon-blue));
     transform: scale(1.1);
 }
-.top-toolbar a.active span {
-    color: var(--text-main);
-    text-shadow: 0 0 8px var(--neon-blue);
-}
+.top-toolbar a.active span { color: var(--text-main); text-shadow: 0 0 8px var(--neon-blue); }
 
 /* HERO SECTION */
 .hero-section {
     position: relative; padding: 20px; text-align: center;
     background: linear-gradient(180deg, rgba(6, 6, 11, 0.1) 0%, rgba(6, 6, 11, 0.7) 50%, rgba(6, 6, 11, 1) 100%), url('asset1.png'); 
     background-size: cover;
-    background-position: center center;
+    background-position: center 20%;
     background-repeat: no-repeat;
     padding-top: 60px; padding-bottom: 30px;
     border-bottom: 1px solid rgba(0, 229, 255, 0.1);
 }
-
 .hero-top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
 .user-profile-badge {
     display: flex; align-items: center; gap: 8px;
@@ -83,7 +77,6 @@ img { max-width: 100%; display: block; }
 .user-name { font-size: 12px; font-weight: 700; color: var(--text-main); }
 .user-points { font-size: 10px; color: #ffcc00; font-weight: 700; }
 .hero-actions { display: flex; gap: 8px; }
-
 .hero-content { margin-bottom: 20px; }
 .hero-main-logo { 
     width: 100%; max-width: 220px; margin: 0 auto 15px auto; 
@@ -117,13 +110,18 @@ img { max-width: 100%; display: block; }
 .section-header { display: flex; justify-content: space-between; align-items: flex-end; padding: 0 20px; margin-bottom: 15px; }
 .section-title-group { display: flex; align-items: center; gap: 8px; }
 .flash-icon { font-size: 22px; }
-
-/* PURPLE LIGHTNING BOLT */
 .purple-bolt { filter: hue-rotate(250deg) saturate(5) brightness(1.5); }
 
-.section-title { font-size: 22px; font-weight: 900; font-style: italic; letter-spacing: -0.5px; }
+/* ROAD RAGE FONT FOR TITLES */
+.section-title { 
+    font-family: var(--font-display); 
+    font-size: 34px; 
+    font-weight: 400; 
+    letter-spacing: 1px;
+    margin-top: -5px; 
+    line-height: 1;
+}
 
-/* TITLE GRADIENTS & COLORS */
 .flash-deals-title { 
     background: linear-gradient(180deg, #ff003c 0%, #d946ef 100%);
     -webkit-background-clip: text;
@@ -184,12 +182,12 @@ img { max-width: 100%; display: block; }
 .category-overlay h4 { font-size: 10px; font-weight: 800; text-transform: uppercase; color: var(--text-main); margin-top: 2px; }
 .category-overlay p { font-size: 9px; color: var(--text-muted); }
 
-/* FOOTER BANNER (BRIGHTER & LESS ZOOMED) */
+/* FOOTER BANNER (BRIGHTER & USING footer.png) */
 .footer-banner {
     position: relative;
     text-align: center; 
     padding: 60px 20px;
-    background: linear-gradient(180deg, rgba(6, 6, 11, 0.3) 0%, rgba(6, 6, 11, 0.85) 100%), url('footer-bg.png') no-repeat center bottom;
+    background: linear-gradient(180deg, rgba(6, 6, 11, 0.2) 0%, rgba(6, 6, 11, 0.85) 100%), url('footer.png') no-repeat center bottom;
     background-size: cover;
     min-height: 300px; 
     display: flex;
@@ -200,40 +198,27 @@ img { max-width: 100%; display: block; }
     border-top: 1px solid rgba(217, 70, 239, 0.5);
 }
 
-.footer-content { 
-    position: relative; 
-    z-index: 2; 
-    width: 100%;
-    max-width: 500px;
-}
+.footer-content { position: relative; z-index: 2; width: 100%; max-width: 500px; }
+.footer-banner h2 { font-size: 18px; font-weight: 800; margin-bottom: 12px; color: var(--text-main); font-style: italic; text-shadow: 0 2px 5px rgba(0,0,0,0.9); }
 
-.footer-banner h2 { 
-    font-size: 18px; 
-    font-weight: 800; 
-    margin-bottom: 8px; 
-    color: var(--text-main); 
-    font-style: italic; 
-    text-shadow: 0 2px 5px rgba(0,0,0,0.9); 
-}
-
-.footer-banner p { 
-    font-size: 18px; 
-    font-weight: 900; 
-    font-style: italic; 
-    margin-bottom: 5px; 
+/* APPLYING ROAD RAGE FONT TO FOOTER SLOGAN */
+.footer-brand-text {
+    font-family: var(--font-display); 
+    font-size: 32px; 
+    margin-bottom: 10px; 
+    line-height: 1.2;
     text-shadow: 0 2px 5px rgba(0,0,0,0.9);
 }
 
-/* THREE COLORS FOR FOOTER */
 .find-text { color: var(--neon-blue); text-shadow: 0 0 15px var(--neon-blue); }
 .choose-text { color: #ffffff; text-shadow: 0 0 15px rgba(255,255,255,0.8); }
 .book-text { color: var(--neon-pink); text-shadow: 0 0 15px var(--neon-pink); }
 
 /* REAL PEOPLE TEXT */
-.real-people-text { font-size: 13px !important; font-style: normal !important; font-weight: 700 !important; color: #ffffff !important; margin-top: 15px !important; margin-bottom: 2px !important; }
+.real-people-text { font-size: 13px !important; font-style: normal !important; font-weight: 700 !important; color: #ffffff !important; margin-top: 15px !important; margin-bottom: 2px !important; text-shadow: 0 2px 5px rgba(0,0,0,0.9); }
 .real-services { color: var(--neon-blue); }
 .real-time { color: var(--neon-pink); }
-.discover-text { font-size: 13px !important; color: var(--text-muted) !important; margin-top: 5px !important; font-style: normal !important; font-weight: 400 !important; }
+.discover-text { font-size: 13px !important; color: var(--text-muted) !important; margin-top: 5px !important; font-style: normal !important; font-weight: 400 !important; text-shadow: 0 2px 5px rgba(0,0,0,0.9); }
 
 /* VIBE CHAT BUTTON */
 .vibe-chat-btn {
@@ -261,41 +246,16 @@ img { max-width: 100%; display: block; }
     animation: slideUp 0.3s ease-out;
 }
 @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
-.chat-header {
-    padding: 15px 20px; border-bottom: 1px solid var(--border-color);
-    display: flex; justify-content: space-between; align-items: center;
-}
+.chat-header { padding: 15px 20px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
 .chat-header h3 { font-size: 18px; font-weight: 800; color: var(--neon-pink); }
 .close-chat { color: var(--text-muted); font-size: 18px; font-weight: 800; }
-.chat-messages {
-    flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px;
-}
-.message {
-    max-width: 80%; padding: 12px 16px; border-radius: 16px;
-    font-size: 14px; line-height: 1.4; font-weight: 500;
-}
-.ai-message {
-    background: rgba(139, 92, 246, 0.2); border: 1px solid var(--neon-purple);
-    align-self: flex-start; border-bottom-left-radius: 4px;
-}
-.user-message {
-    background: rgba(0, 229, 255, 0.15); border: 1px solid var(--neon-blue);
-    align-self: flex-end; border-bottom-right-radius: 4px; color: #fff;
-}
-.chat-input-area {
-    padding: 15px 20px; border-top: 1px solid var(--border-color);
-    display: flex; gap: 10px; background: rgba(6, 6, 11, 0.9);
-    border-bottom-left-radius: 24px; border-bottom-right-radius: 24px;
-}
-.chat-input-area input {
-    flex: 1; background: rgba(26, 26, 36, 0.8); border: 1px solid var(--border-color);
-    padding: 12px 15px; border-radius: 20px; color: white; outline: none; font-family: inherit;
-}
-.chat-input-area button {
-    background: var(--neon-pink); color: white; width: 45px; height: 45px;
-    border-radius: 50%; display: flex; justify-content: center; align-items: center;
-    font-size: 18px; box-shadow: var(--glow-pink);
-}
+.chat-messages { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; }
+.message { max-width: 80%; padding: 12px 16px; border-radius: 16px; font-size: 14px; line-height: 1.4; font-weight: 500; }
+.ai-message { background: rgba(139, 92, 246, 0.2); border: 1px solid var(--neon-purple); align-self: flex-start; border-bottom-left-radius: 4px; }
+.user-message { background: rgba(0, 229, 255, 0.15); border: 1px solid var(--neon-blue); align-self: flex-end; border-bottom-right-radius: 4px; color: #fff; }
+.chat-input-area { padding: 15px 20px; border-top: 1px solid var(--border-color); display: flex; gap: 10px; background: rgba(6, 6, 11, 0.9); border-bottom-left-radius: 24px; border-bottom-right-radius: 24px; }
+.chat-input-area input { flex: 1; background: rgba(26, 26, 36, 0.8); border: 1px solid var(--border-color); padding: 12px 15px; border-radius: 20px; color: white; outline: none; font-family: inherit; }
+.chat-input-area button { background: var(--neon-pink); color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 18px; box-shadow: var(--glow-pink); }
 
 /* RESPONSIVE */
 @media (min-width: 768px) {
