@@ -38,13 +38,13 @@
     </nav>
 
     <!-- 2. HERO SECTION -->
-    <header class="hero-section" style="background-image: linear-gradient(180deg, rgba(6, 6, 11, 0.2) 0%, rgba(6, 6, 11, 0.8) 70%, rgba(6, 6, 11, 1) 100%), url('asset1.png');">
+    <header class="hero-section">
         <div class="hero-top-bar">
             <div class="user-profile-badge">
                 <img src="profile.photo.png" alt="User" class="avatar">
                 <div class="user-info">
-                    <span class="user-name">Hey, Diamond</span>
-                    <span class="user-points">⭐ 425 pts</span>
+                    <span class="user-name">Diamond Carter</span>
+                    <span class="user-points">👑 425 pts</span>
                 </div>
             </div>
             
@@ -56,11 +56,6 @@
         </div>
 
         <div class="hero-content">
-            <!-- NEW HERO TEXT OVERLAY -->
-            <div class="hero-center-text">
-                <h3>FIND WHAT MOVES YOU.</h3>
-                <p>Discover something new.</p>
-            </div>
             <h2>Discover the people and places that help you <span>feel your best.</span></h2>
         </div>
 
@@ -72,7 +67,7 @@
     </header>
 
     <main>
-        <!-- FLASH DEALS (Purple Lightning Bolt, Red Title) -->
+        <!-- FLASH DEALS -->
         <section class="section-block">
             <div class="section-header">
                 <div class="section-title-group">
@@ -86,6 +81,7 @@
                 <a href="business.html" class="deal-card">
                     <div class="card-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Barbershop">
+                        <span class="badge-discount">36% OFF</span>
                     </div>
                     <div class="card-content">
                         <div class="card-header-row"><h4>The Cut Barbershop</h4><span class="distance">📍 1.1 mi</span></div>
@@ -99,6 +95,7 @@
                 <a href="business.html" class="deal-card">
                     <div class="card-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Nails">
+                        <span class="badge-discount">50% OFF</span>
                     </div>
                     <div class="card-content">
                         <div class="card-header-row"><h4>Nail Luxe</h4><span class="distance">📍 1.8 mi</span></div>
@@ -109,10 +106,24 @@
                         </div>
                     </div>
                 </a>
+                <a href="business.html" class="deal-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
+                        <span class="badge-discount">50% OFF</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header-row"><h4>Equinox Fitness</h4><span class="distance">📍 2.4 mi</span></div>
+                        <p class="service-name">Guest Pass</p>
+                        <div class="price-row">
+                            <div class="price-group"><span class="price">$25</span><span class="old-price">$50</span></div>
+                            <span class="timer">⏱ 5h 40m left</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <!-- BOOK SOMETHING (Light Blue Title) -->
+        <!-- BOOK SOMETHING -->
         <section class="section-block">
             <div class="section-header"><h3 class="section-title light-blue-title">Book Something</h3></div>
             <div class="category-grid">
@@ -144,13 +155,41 @@
                         <h4>FITNESS</h4><p>Stronger. Healthier. You.</p>
                     </div>
                 </a>
+                <a href="category.html?type=spa" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80" alt="Spa">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">🧘</span><span class="cat-arrow">></span></div>
+                        <h4>SPA & WELLNESS</h4><p>Relax. Rejuvenate. Repeat.</p>
+                    </div>
+                </a>
+                <a href="category.html?type=entertainment" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=500&q=80" alt="Entertainment">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">🎵</span><span class="cat-arrow">></span></div>
+                        <h4>ENTERTAINMENT</h4><p>Live. Local. Unforgettable.</p>
+                    </div>
+                </a>
+                <a href="category.html?type=shopping" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=500&q=80" alt="Shopping">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">🛍️</span><span class="cat-arrow">></span></div>
+                        <h4>SHOPPING</h4><p>Style. Brands. You.</p>
+                    </div>
+                </a>
+                <a href="#" class="category-card" style="opacity: 0.6;">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80" alt="Hotels">
+                    <div class="category-overlay">
+                        <div class="cat-header"><span class="cat-icon-badge">🏨</span><span class="cat-arrow">></span></div>
+                        <h4>HOTELS & SUITES</h4><p style="color: var(--neon-pink); font-size: 8px;">COMING SOON</p>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <!-- POPULAR NEAR YOU (Purple Title) -->
+        <!-- POPULAR NEAR YOU -->
         <section class="section-block">
             <div class="section-header">
-                <h3 class="section-title purple-title">Popular Near You</h3>
+                <h3 class="section-title"><span class="purple-text">Popular</span> <span class="light-blue-text">Near You</span></h3>
                 <a href="explore.html" class="see-all">See All ></a>
             </div>
             <div class="scroll-x">
@@ -174,19 +213,41 @@
                         <div class="meta-row"><span class="rating">⭐ 4.7 (642)</span><span class="distance">📍 1.8 mi</span></div>
                     </div>
                 </a>
+                <a href="business.html" class="popular-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
+                        <button class="heart-btn">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h4>Equinox Fitness</h4><p class="category-label">Fitness</p>
+                        <div class="meta-row"><span class="rating">⭐ 4.6 (932)</span><span class="distance">📍 2.6 mi</span></div>
+                    </div>
+                </a>
+                <a href="business.html" class="popular-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
+                        <button class="heart-btn">♡</button>
+                    </div>
+                    <div class="card-content">
+                        <h4>STK Steakhouse</h4><p class="category-label">Restaurant</p>
+                        <div class="meta-row"><span class="rating">⭐ 4.8 (1.5k)</span><span class="distance">📍 2.3 mi</span></div>
+                    </div>
+                </a>
             </div>
         </section>
 
         <!-- FOOTER BANNER -->
         <div class="footer-banner">
-            <h2>Make time for what matters.</h2>
-            <p>
-                <span class="find-text">Find it.</span> 
-                <span class="choose-text">Choose it.</span> 
-                <span class="book-text">Book it.</span>
-            </p>
-            <p class="real-people-text">Real People. <span class="real-services">Real Services.</span> <span class="real-time">Real Time.</span></p>
-            <p class="discover-text">Discover something new.</p>
+            <div class="footer-content">
+                <h2>Make time for what matters.</h2>
+                <p>
+                    <span class="find-text">Find it.</span> 
+                    <span class="choose-text">Choose it.</span> 
+                    <span class="book-text">Book it.</span>
+                </p>
+                <p class="real-people-text">Real People. <span class="real-services">Real Services.</span> <span class="real-time">Real Time.</span></p>
+                <p class="discover-text">Discover something new.</p>
+            </div>
         </div>
     </main>
 
