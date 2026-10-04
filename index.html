@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booked - Home</title>
-    <!-- Cooler Icons + Road Rage Font -->
+    <!-- Icons + New Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="styles.css">
@@ -13,6 +13,11 @@
 
     <!-- 1. FIXED TOP TOOLBAR -->
     <nav class="top-toolbar">
+        <!-- LOGO ON THE LEFT -->
+        <div class="toolbar-left">
+            <img src="footer-bg.png" alt="Booked Logo" class="toolbar-logo">
+        </div>
+        
         <a href="index.html" class="active">
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
@@ -34,32 +39,16 @@
             <span>Rewards</span>
         </a>
         <a href="profile.html">
-            <i class="fa-solid fa-user"></i>
+            <!-- PROFILE PHOTO INSTEAD OF ICON -->
+            <img src="profile.photo.png" alt="Profile" class="toolbar-avatar">
             <span>Profile</span>
         </a>
     </nav>
 
-    <!-- 2. HERO SECTION -->
+    <!-- 2. HERO SECTION (Half Size, No Logo/Profile) -->
     <header class="hero-section">
-        <div class="hero-top-bar">
-            <div class="user-profile-badge">
-                <img src="profile.photo.png" alt="User" class="avatar">
-                <div class="user-info">
-                    <span class="user-name">Diamond Carter</span>
-                    <span class="user-points">👑 425 pts</span>
-                </div>
-            </div>
-            
-            <div class="hero-actions">
-                <button class="icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></button>
-                <button class="icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
-            </div>
-        </div>
-
         <div class="hero-content">
-            <!-- TOP LOGO using footer-bg.png as requested -->
-            <img src="footer-bg.png" alt="Booked Logo" class="hero-main-logo">
-            <h2>Discover the people and places that help you <span>feel your best.</span></h2>
+            <h2 class="hero-title-font">Discover the people and places that help you <span>feel your best.</span></h2>
         </div>
 
         <div class="search-container">
@@ -70,7 +59,7 @@
     </header>
 
     <main>
-        <!-- FLASH DEALS -->
+        <!-- FLASH DEALS (Bungee Font) -->
         <section class="section-block">
             <div class="section-header">
                 <div class="section-title-group">
@@ -126,9 +115,9 @@
             </div>
         </section>
 
-        <!-- BOOK SOMETHING -->
+        <!-- BOOK SOMETHING (Antic Slab Font) -->
         <section class="section-block">
-            <div class="section-header"><h3 class="section-title light-blue-title">Book Something</h3></div>
+            <div class="section-header"><h3 class="section-title slab-title light-blue-title">Book Something</h3></div>
             <div class="category-grid">
                 <a href="category.html?type=restaurants" class="category-card">
                     <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Restaurants">
@@ -189,10 +178,10 @@
             </div>
         </section>
 
-        <!-- POPULAR NEAR YOU -->
+        <!-- POPULAR NEAR YOU (Antic Slab Font) -->
         <section class="section-block">
             <div class="section-header">
-                <h3 class="section-title"><span class="purple-text">Popular</span> <span class="light-blue-text">Near You</span></h3>
+                <h3 class="section-title slab-title"><span class="purple-text">Popular</span> <span class="light-blue-text">Near You</span></h3>
                 <a href="explore.html" class="see-all">See All ></a>
             </div>
             <div class="scroll-x">
@@ -239,17 +228,17 @@
             </div>
         </section>
 
-        <!-- FOOTER BANNER (USING footer.png) -->
+        <!-- FOOTER BANNER (Antic Slab Font, Footer Image) -->
         <div class="footer-banner">
             <div class="footer-content">
-                <h2>Make time for what matters.</h2>
+                <h2 class="footer-title-font">Make time for what matters.</h2>
                 <p class="footer-brand-text">
                     <span class="find-text">Find it.</span> 
                     <span class="choose-text">Choose it.</span> 
                     <span class="book-text">Book it.</span>
                 </p>
                 <p class="real-people-text">Real People. <span class="real-services">Real Services.</span> <span class="real-time">Real Time.</span></p>
-                <p class="discover-text">Discover Something NEW.</p>
+                <p class="discover-text">Discover something new.</p>
             </div>
         </div>
     </main>
