@@ -10,30 +10,30 @@
 </head>
 <body>
 
-    <!-- 1. FIXED TOP TOOLBAR -->
+    <!-- 1. FIXED TOP TOOLBAR (Home = Pink, Others = Blue, Profile Badge on Right) -->
     <nav class="top-toolbar">
-        <!-- HOME (Neon Pink) -->
         <a href="index.html" class="active">
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
         </a>
-        <!-- EXPLORE (Neon Blue) -->
         <a href="explore.html">
             <i class="fa-solid fa-magnifying-glass"></i>
             <span>Explore</span>
         </a>
-        <!-- BOOKINGS (Neon Blue) -->
         <a href="bookings.html">
             <i class="fa-solid fa-calendar-check"></i>
             <span>Bookings</span>
         </a>
-        <!-- REWARDS (Neon Blue) -->
+        <a href="saved.html">
+            <i class="fa-solid fa-heart"></i>
+            <span>Saved</span>
+        </a>
         <a href="rewards.html">
             <i class="fa-solid fa-star"></i>
             <span>Rewards</span>
         </a>
 
-        <!-- DIAMOND CARTER PROFILE BADGE with Bell + Menu -->
+        <!-- Diamond Carter Profile Badge with Bell + Menu -->
         <div class="profile-badge-toolbar">
             <a href="profile.html" class="profile-badge-link">
                 <img src="profile.photo.png" alt="Diamond Carter" class="profile-badge-avatar">
@@ -47,18 +47,9 @@
         </div>
     </nav>
 
-    <!-- 2. SEARCH BAR -->
-    <div class="search-container-top">
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" placeholder="Search for restaurants, barbers, salons...">
-        <button class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
-    </div>
-
-    <!-- 3. HERO SECTION -->
+    <!-- 2. HERO SECTION (Stretches to top, no logo, full picture visible) -->
     <header class="hero-section">
         <div class="hero-content">
-            <img src="header.image.png" alt="Booked Logo" class="hero-main-logo">
-
             <h2 class="hero-main-text">Discover the people and places that help you <span>feel your best.</span></h2>
 
             <div class="hero-caveat-text">
@@ -71,6 +62,13 @@
             </div>
         </div>
     </header>
+
+    <!-- 3. SEARCH BAR (Overlaid at the bottom of the hero) -->
+    <div class="search-container-top">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="Search for restaurants, barbers, salons...">
+        <button class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
 
     <main>
         <!-- FLASH DEALS -->
