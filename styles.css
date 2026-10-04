@@ -1,5 +1,5 @@
-/* IMPORTING ALL FONTS (Caveat, Bungee, Outfit) */
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Caveat:wght@400;700&family=Outfit:wght@300;400;600;800;900&display=swap');
+/* IMPORTING ALL FONTS (Caveat, Bungee, Outfit, Original Surfer) */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Caveat:wght@400;700&family=Original+Surfer&family=Outfit:wght@300;400;600;800;900&display=swap');
 
 :root {
     --bg-dark: #0B0410; /* Deep Purple Base */
@@ -20,6 +20,7 @@
     --font-main: 'Outfit', sans-serif;
     --font-bungee: 'Bungee', cursive;
     --font-caveat: 'Caveat', cursive;
+    --font-original: 'Original Surfer', cursive;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -78,7 +79,7 @@ img { max-width: 100%; display: block; }
     backdrop-filter: blur(10px);
     max-width: 90%; width: 100%; margin: 20px auto 0 auto;
 }
-.search-icon { color: var(--neon-blue); margin-right: 10px; }
+.search-icon { color: var(--neon-blue); margin-right: 10px; font-size: 16px; }
 .search-container-top input { flex: 1; background: transparent; border: none; color: var(--text-main); font-size: 13px; outline: none; }
 .search-container-top input::placeholder { color: var(--text-muted); }
 .search-btn {
@@ -101,23 +102,25 @@ img { max-width: 100%; display: block; }
 .hero-top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
 .user-profile-badge {
     display: flex; align-items: center; gap: 8px;
-    background: rgba(26, 26, 36, 0.6); padding: 4px 10px 4px 4px;
+    background: rgba(26, 26, 36, 0.6); padding: 6px 14px;
     border-radius: 30px; border: 1px solid rgba(0, 229, 255, 0.2);
-}
-.avatar {
-    width: 32px; height: 32px; border-radius: 50%; object-fit: cover;
-    border: 2px solid var(--neon-pink); box-shadow: 0 0 10px rgba(217, 70, 239, 0.5);
 }
 .user-info { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
 .user-name { font-size: 12px; font-weight: 700; color: var(--text-main); }
 .user-points { font-size: 10px; color: #ffcc00; font-weight: 700; }
-.hero-actions { display: flex; gap: 8px; }
+.hero-actions { display: flex; gap: 8px; align-items: center; }
 
-.hero-content { margin-bottom: 20px; }
-.hero-main-logo { 
-    width: 100%; max-width: 220px; margin: 0 auto 15px auto; 
-    mix-blend-mode: screen; filter: drop-shadow(0 0 15px rgba(217, 70, 239, 0.6)); 
+.hero-top-logo {
+    height: 28px;
+    width: auto;
+    max-width: 100px;
+    margin-right: 8px;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 5px rgba(217, 70, 239, 0.6));
 }
+
+.icon-btn { color: var(--text-main); font-size: 18px; padding: 4px; }
+.hero-content { margin-bottom: 20px; }
 .hero-content h2 {
     font-size: 16px; font-weight: 600; line-height: 1.4;
     margin: 0 auto 20px auto; max-width: 320px;
@@ -126,18 +129,34 @@ img { max-width: 100%; display: block; }
 .hero-content h2 span { color: var(--neon-blue); font-weight: 800; font-style: italic; }
 
 /* Caveat Text in Hero */
-.hero-caveat-text { font-family: var(--font-caveat); margin-top: 15px; }
-.hero-caveat-text h3 { font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 8px; text-shadow: 0 2px 5px rgba(0,0,0,0.9); }
-.hero-caveat-text p { font-size: 20px; font-weight: 700; text-shadow: 0 2px 5px rgba(0,0,0,0.9); }
-.blue-italic { color: var(--neon-blue); font-style: italic; text-shadow: 0 0 10px var(--neon-blue); }
+.hero-caveat-text { margin-top: 15px; }
+
+/* APPLYING ORIGINAL SURFER FONT TO "MAKE TIME..." */
+.matters-font {
+    font-family: var(--font-original);
+    font-size: 22px; 
+    font-weight: 400; 
+    color: #ffffff; 
+    margin-bottom: 8px; 
+    text-shadow: 0 2px 5px rgba(0,0,0,0.9);
+}
+
+/* ALL BLUE TEXT FOR REAL PEOPLE... */
+.all-blue-text {
+    font-family: var(--font-caveat);
+    font-size: 22px; 
+    font-weight: 700; 
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
 
 /* SECTIONS & CARDS */
 .section-block { padding: 15px 0; }
 .section-header { display: flex; justify-content: space-between; align-items: flex-end; padding: 0 20px; margin-bottom: 15px; }
 .section-title-group { display: flex; align-items: center; gap: 8px; }
 
-/* ELECTRIC PINK LIGHTNING BOLT */
-.electric-pink-bolt { font-size: 22px; filter: sepia(1) saturate(10) hue-rotate(290deg) brightness(1.5); }
+/* FONT AWESOME SECTION ICONS WITH NEON PINK GLOW */
+.section-icon { font-size: 22px; color: var(--neon-pink); filter: drop-shadow(0 0 8px var(--neon-pink)); }
 
 /* BUNGEE FONT FOR ALL SECTION TITLES */
 .bungee-title { font-family: var(--font-bungee); font-size: 24px; font-weight: 400; letter-spacing: 1px; margin-top: 0; line-height: 1; }
@@ -199,7 +218,7 @@ img { max-width: 100%; display: block; }
 .category-overlay h4 { font-size: 10px; font-weight: 800; text-transform: uppercase; color: var(--text-main); margin-top: 2px; }
 .category-overlay p { font-size: 9px; color: var(--text-muted); }
 
-/* FOOTER BANNER (Using footer.image.png) */
+/* FOOTER BANNER */
 .footer-banner {
     position: relative;
     text-align: center; 
@@ -242,6 +261,7 @@ img { max-width: 100%; display: block; }
     box-shadow: 0 0 25px rgba(217, 70, 239, 0.8); z-index: 999;
     border: 1px solid rgba(255,255,255,0.2);
 }
+.vibe-chat-btn i { font-size: 16px; }
 
 /* VIBE CHAT MODAL */
 .chat-modal {
