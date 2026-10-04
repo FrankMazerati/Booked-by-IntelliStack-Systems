@@ -25,11 +25,17 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* BODY - Purple Neon Background for Main Content */
 body {
-    background: linear-gradient(rgba(11, 4, 16, 0.85), rgba(11, 4, 16, 0.95)), url('asset2.png') no-repeat center center fixed;
-    background-size: cover;
-    color: var(--text-main); font-family: var(--font-main);
-    padding-top: 80px; padding-bottom: 100px; -webkit-font-smoothing: antialiased;
+    background: 
+        radial-gradient(circle at top center, rgba(139, 92, 246, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at bottom center, rgba(217, 70, 239, 0.15) 0%, transparent 50%),
+        linear-gradient(180deg, #1A0B2E 0%, #0F0520 50%, #0B0410 100%);
+    background-attachment: fixed;
+    color: var(--text-main);
+    font-family: var(--font-main);
+    padding-bottom: 100px;
+    -webkit-font-smoothing: antialiased;
 }
 
 a { text-decoration: none; color: inherit; }
