@@ -1,293 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booked - Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="icon.png" />
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booked by IntelliStack</title>
+  <!-- Add your font link here (e.g., Google Fonts) -->
 </head>
 <body>
 
-    <!-- 1. FIXED TOP TOOLBAR -->
-    <nav class="top-toolbar">
-        <a href="index.html" class="active">
-            <i class="fa-solid fa-house"></i>
-            <span>Home</span>
-        </a>
-        <a href="explore.html">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span>Explore</span>
-        </a>
-        <a href="bookings.html">
-            <i class="fa-solid fa-calendar-check"></i>
-            <span>Bookings</span>
-        </a>
-        <a href="saved.html">
-            <i class="fa-solid fa-heart"></i>
-            <span>Saved</span>
-        </a>
-        <a href="rewards.html">
-            <i class="fa-solid fa-star"></i>
-            <span>Rewards</span>
-        </a>
+  <!-- 1. TOOLBAR (Overlays the hero image) -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <!-- Add your menu/logo icon here if needed, but the main logo is in the hero -->
+    </div>
+    <div class="nav-right">
+      <!-- User profile, notifications, menu from your screenshot -->
+      <span class="user-badge">Diamond Carter</span>
+    </div>
+  </nav>
 
-        <div class="profile-badge-toolbar">
-            <a href="profile.html" class="profile-badge-link">
-                <img src="profile.photo.png" alt="Diamond Carter" class="profile-badge-avatar">
-                <div class="profile-badge-info">
-                    <span class="profile-badge-name">Diamond Carter</span>
-                    <span class="profile-badge-points">👑 425 pts</span>
-                </div>
-            </a>
-            <button class="toolbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
-            <button class="toolbar-icon-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
-        </div>
-    </nav>
-
-    <!-- 2. HERO SECTION -->
-    <header class="hero-section">
-        <div class="hero-content">
-            <h2 class="hero-main-text">Discover the people and places that help you <span>feel your best.</span></h2>
-
-            <div class="hero-caveat-text">
-                <h1>Make time for what matters most!<br>Real People. Real Services. In Real Time.</h1>
-                <p class="all-blue-text">
-                    <span>Real People.</span> 
-                    <span>Real Services.</span> 
-                    <span>In Real Time.</span>
-                </p>
-            </div>
-        </div>
-    </header>
-
-    <!-- 3. SEARCH BAR -->
-    <div class="search-container-top">
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" placeholder="Search for restaurants, barbers, salons...">
-        <button class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
+  <!-- 2. HERO SECTION (Starts at the very top of the page) -->
+  <section class="hero-section">
+    
+    <!-- 3. LOGO BLOCK (Right above the text) -->
+    <div class="hero-brand-logo">
+      <!-- The "B" with checkmark logo -->
+      <img src="booked-logo.png" alt="Booked Logo" class="brand-icon">
+      <!-- The wordmark -->
+      <h1 class="brand-name">Booked</h1>
+      <p class="brand-tagline">Find it. Choose it. Book it.</p>
+      <p class="brand-credit">by IntelliStack Systems</p>
     </div>
 
-    <main>
-        <!-- FLASH DEALS -->
-        <section class="section-block">
-            <div class="section-header">
-                <div class="section-title-group">
-                    <i class="fa-solid fa-bolt section-icon neon-pink-icon"></i>
-                    <h3 class="section-title bungee-title">
-                        <span class="gray-text">FL</span><span class="blue-text">ASH</span> <span class="pink-text underline">DEALS</span>
-                    </h3>
-                    <span class="section-subtitle">Limited time. Big savings.</span>
-                </div>
-                <a href="explore.html" class="see-all">See All ></a>
-            </div>
-            <div class="scroll-x">
-                <a href="business.html" class="deal-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Barbershop">
-                        <span class="badge-discount">36% OFF</span>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header-row"><h4>The Cut Barbershop</h4><span class="distance">📍 1.1 mi</span></div>
-                        <p class="service-name">Signature Cut</p>
-                        <div class="price-row">
-                            <div class="price-group"><span class="price">$29</span><span class="old-price">$45</span></div>
-                            <span class="timer">⏱ 2h 18m left</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="business.html" class="deal-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Nails">
-                        <span class="badge-discount">50% OFF</span>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header-row"><h4>Nail Luxe</h4><span class="distance">📍 1.8 mi</span></div>
-                        <p class="service-name">Gel Manicure</p>
-                        <div class="price-row">
-                            <div class="price-group"><span class="price">$40</span><span class="old-price">$65</span></div>
-                            <span class="timer">⏱ 3h 12m left</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="business.html" class="deal-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
-                        <span class="badge-discount">50% OFF</span>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header-row"><h4>Equinox Fitness</h4><span class="distance">📍 2.4 mi</span></div>
-                        <p class="service-name">Guest Pass</p>
-                        <div class="price-row">
-                            <div class="price-group"><span class="price">$25</span><span class="old-price">$50</span></div>
-                            <span class="timer">⏱ 5h 40m left</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- BOOK SOMETHING -->
-        <section class="section-block">
-            <div class="section-header">
-                <div class="section-title-group">
-                    <i class="fa-solid fa-calendar-check section-icon neon-pink-icon"></i>
-                    <h3 class="section-title bungee-title">
-                        <span class="blue-text">BOOK</span> <span class="pink-text">SOMETHING</span>
-                    </h3>
-                </div>
-            </div>
-            <div class="category-grid">
-                <a href="category.html?type=restaurants" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Restaurants">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🍽️</span><span class="cat-arrow">></span></div>
-                        <h4>RESTAURANTS</h4><p>Great food. Good vibes.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=barbershops" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=500&q=80" alt="Barber Shops">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">✂️</span><span class="cat-arrow">></span></div>
-                        <h4>BARBER SHOPS</h4><p>Look good. Feel good.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=nailsalons" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Nail Salons">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">💅</span><span class="cat-arrow">></span></div>
-                        <h4>NAIL SALONS</h4><p>Nails. Beauty. Confidence.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=fitness" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🏋️</span><span class="cat-arrow">></span></div>
-                        <h4>FITNESS</h4><p>Stronger. Healthier. You.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=spa" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80" alt="Spa">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🧘</span><span class="cat-arrow">></span></div>
-                        <h4>SPA & WELLNESS</h4><p>Relax. Rejuvenate. Repeat.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=entertainment" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=500&q=80" alt="Entertainment">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🎵</span><span class="cat-arrow">></span></div>
-                        <h4>ENTERTAINMENT</h4><p>Live. Local. Unforgettable.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=shopping" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=500&q=80" alt="Shopping">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🛍️</span><span class="cat-arrow">></span></div>
-                        <h4>SHOPPING</h4><p>Style. Brands. You.</p>
-                    </div>
-                </a>
-                <a href="#" class="category-card" style="opacity: 0.6;">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80" alt="Hotels">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🏨</span><span class="cat-arrow">></span></div>
-                        <h4>HOTELS & SUITES</h4><p style="color: var(--neon-pink); font-size: 8px;">COMING SOON</p>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- POPULAR NEAR YOU -->
-        <section class="section-block">
-            <div class="section-header">
-                <div class="section-title-group">
-                    <i class="fa-solid fa-fire section-icon neon-pink-icon"></i>
-                    <h3 class="section-title bungee-title">
-                        <span class="blue-text">POPULAR</span> <span class="pink-text">NEAR YOU</span>
-                    </h3>
-                </div>
-                <a href="explore.html" class="see-all">See All ></a>
-            </div>
-            <div class="scroll-x">
-                <a href="business.html" class="popular-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Barbershop">
-                        <button class="heart-btn">♡</button>
-                    </div>
-                    <div class="card-content">
-                        <h4>The Cut Barbershop</h4><p class="category-label">Barber Shop</p>
-                        <div class="meta-row"><span class="rating">⭐ 4.8 (1.2k)</span><span class="distance">📍 1.1 mi</span></div>
-                    </div>
-                </a>
-                <a href="business.html" class="popular-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Nails">
-                        <button class="heart-btn">♡</button>
-                    </div>
-                    <div class="card-content">
-                        <h4>Nails by Luxe</h4><p class="category-label">Nail Salon</p>
-                        <div class="meta-row"><span class="rating">⭐ 4.7 (642)</span><span class="distance">📍 1.8 mi</span></div>
-                    </div>
-                </a>
-                <a href="business.html" class="popular-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
-                        <button class="heart-btn">♡</button>
-                    </div>
-                    <div class="card-content">
-                        <h4>Equinox Fitness</h4><p class="category-label">Fitness</p>
-                        <div class="meta-row"><span class="rating">⭐ 4.6 (932)</span><span class="distance">📍 2.6 mi</span></div>
-                    </div>
-                </a>
-                <a href="business.html" class="popular-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
-                        <button class="heart-btn">♡</button>
-                    </div>
-                    <div class="card-content">
-                        <h4>STK Steakhouse</h4><p class="category-label">Restaurant</p>
-                        <div class="meta-row"><span class="rating">⭐ 4.8 (1.5k)</span><span class="distance">📍 2.3 mi</span></div>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- FOOTER BANNER -->
-        <div class="footer-banner">
-            <div class="footer-content">
-                <p class="footer-brand-text">
-                    <span class="white-text">Find it.</span> 
-                    <span class="white-text">Choose it.</span> 
-                    <span class="white-text">Book it.</span>
-                </p>
-                <p class="discover-text">Discover Something New</p>
-            </div>
-        </div>
-    </main>
-
-    <!-- VIBE CHAT BUTTON -->
-    <button class="vibe-chat-btn" id="vibeChatBtn"><i class="fa-solid fa-comment-dots"></i><span>Vibe Chat</span></button>
-
-    <!-- VIBE CHAT MODAL -->
-    <div class="chat-modal" id="chatModal">
-        <div class="chat-container">
-            <div class="chat-header">
-                <h3>Vibe Chat</h3>
-                <button class="close-chat" id="closeChatBtn">✕</button>
-            </div>
-            <div class="chat-messages" id="chatMessages">
-                <div class="message ai-message">Hi Diamond! I'm your Vibe assistant. How can I help you today? You can ask me to book an appointment, check your bookings, or find deals.</div>
-            </div>
-            <div class="chat-input-area">
-                <input type="text" id="chatInput" placeholder="Ask me to book an appointment...">
-                <button id="sendChatBtn">➔</button>
-            </div>
-        </div>
+    <!-- 4. UNIFIED TEXT BLOCK (Same font for both) -->
+    <div class="hero-text">
+      <h1 class="hero-font">Discover the people and places that help you <span class="highlight">feel your best.</span></h1>
+      <p class="hero-font">Make time for what matters most!<br>Real People. Real Services. In Real Time.</p>
     </div>
 
-    <script src="state.js"></script>
-    <script src="router.js"></script>
-    <script src="app.js"></script>
+  </section>
+
 </body>
 </html>
