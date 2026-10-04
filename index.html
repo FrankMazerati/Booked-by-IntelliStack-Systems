@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <!-- 1. FIXED TOP TOOLBAR (Logo Removed) -->
+    <!-- 1. FIXED TOP TOOLBAR (Icons moved here) -->
     <nav class="top-toolbar">
         <a href="index.html" class="active">
             <i class="fa-solid fa-house"></i>
@@ -33,6 +33,9 @@
             <i class="fa-solid fa-star"></i>
             <span>Rewards</span>
         </a>
+        <!-- MOVED HERE: Notifications and Menu -->
+        <button class="icon-btn toolbar-icon"><i class="fa-regular fa-bell"></i></button>
+        <button class="icon-btn toolbar-icon"><i class="fa-solid fa-bars"></i></button>
         <a href="profile.html">
             <img src="profile.photo.png" alt="Profile" class="toolbar-avatar">
             <span>Profile</span>
@@ -48,7 +51,7 @@
 
     <!-- 3. HERO SECTION -->
     <header class="hero-section">
-        <!-- Hero Top Bar (Profile, Name, Points, Notification, Menu) -->
+        <!-- Hero Top Bar (Profile Only) -->
         <div class="hero-top-bar">
             <div class="user-profile-badge">
                 <!-- BIGGER PROFILE PICTURE -->
@@ -58,23 +61,18 @@
                     <span class="user-points">👑 425 pts</span>
                 </div>
             </div>
-            
-            <div class="hero-actions">
-                <button class="icon-btn"><i class="fa-regular fa-bell"></i></button>
-                <button class="icon-btn"><i class="fa-solid fa-bars"></i></button>
-            </div>
         </div>
 
         <!-- Hero Center Content -->
         <div class="hero-content">
-            <!-- BIGGER LOGO IN THE CENTER -->
+            <!-- LOGO CENTERED AT TOP -->
             <img src="header.image.png" alt="Booked Logo" class="hero-main-logo">
             
             <h2 class="hero-main-text">Discover the people and places that help you <span>feel your best.</span></h2>
             
             <div class="hero-caveat-text">
-                <!-- SAME FONT AS ABOVE, REGULAR CASE, BLUE ITALIC FOR MATTERS MOST -->
-                <h3 class="matters-font">Make time for what <span class="blue-italic">matters most</span></h3>
+                <!-- MATCHING FONT, REGULAR CASE, BLUE ITALIC FOR MATTERS MOST, WITH !! -->
+                <h3 class="matters-font">Make time for what <span class="blue-italic">matters most!!</span></h3>
                 <p class="all-blue-text">
                     <span>Real People.</span> 
                     <span>Real Services.</span> 
