@@ -4,45 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booked - Home</title>
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- 1. FIXED TOP TOOLBAR (Diamond Carter & Points moved here) -->
+    <!-- 1. FIXED TOP TOOLBAR -->
     <nav class="top-toolbar">
+        <!-- HOME (Neon Pink) -->
         <a href="index.html" class="active">
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
         </a>
+        <!-- EXPLORE (Neon Blue) -->
         <a href="explore.html">
             <i class="fa-solid fa-magnifying-glass"></i>
             <span>Explore</span>
         </a>
+        <!-- BOOKINGS (Neon Blue) -->
         <a href="bookings.html">
             <i class="fa-solid fa-calendar-check"></i>
             <span>Bookings</span>
         </a>
-        <a href="saved.html">
-            <i class="fa-solid fa-heart"></i>
-            <span>Saved</span>
-        </a>
+        <!-- REWARDS (Neon Blue) -->
         <a href="rewards.html">
             <i class="fa-solid fa-star"></i>
             <span>Rewards</span>
         </a>
-        <button class="icon-btn toolbar-icon"><i class="fa-regular fa-bell"></i></button>
-        <button class="icon-btn toolbar-icon"><i class="fa-solid fa-bars"></i></button>
-        <!-- Profile link with Diamond Carter info -->
-        <a href="profile.html" class="toolbar-profile-link">
-            <img src="profile.photo.png" alt="Profile" class="toolbar-avatar">
-            <div class="toolbar-user-info">
-                <span class="toolbar-user-name">Diamond Carter</span>
-                <span class="toolbar-user-points">👑 425 pts</span>
-            </div>
-        </a>
+
+        <!-- DIAMOND CARTER PROFILE BADGE with Bell + Menu -->
+        <div class="profile-badge-toolbar">
+            <a href="profile.html" class="profile-badge-link">
+                <img src="profile.photo.png" alt="Diamond Carter" class="profile-badge-avatar">
+                <div class="profile-badge-info">
+                    <span class="profile-badge-name">Diamond Carter</span>
+                    <span class="profile-badge-points">👑 425 pts</span>
+                </div>
+            </a>
+            <button class="toolbar-icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+            <button class="toolbar-icon-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
     </nav>
 
     <!-- 2. SEARCH BAR -->
@@ -52,14 +54,13 @@
         <button class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
 
-    <!-- 3. HERO SECTION (No profile info here anymore) -->
+    <!-- 3. HERO SECTION -->
     <header class="hero-section">
-        <!-- Hero Center Content -->
         <div class="hero-content">
             <img src="header.image.png" alt="Booked Logo" class="hero-main-logo">
-            
+
             <h2 class="hero-main-text">Discover the people and places that help you <span>feel your best.</span></h2>
-            
+
             <div class="hero-caveat-text">
                 <h3 class="matters-font">Make time for what <span class="blue-italic">matters most!!</span></h3>
                 <p class="all-blue-text">
