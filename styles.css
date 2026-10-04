@@ -1,308 +1,304 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booked - Home</title>
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="icon.png" />
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* IMPORTING ALL FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Caveat:wght@400;700&family=Original+Surfer&family=Outfit:wght@300;400;600;800;900&display=swap');
 
-    <!-- 1. FIXED TOP TOOLBAR (Icons moved here) -->
-    <nav class="top-toolbar">
-        <a href="index.html" class="active">
-            <i class="fa-solid fa-house"></i>
-            <span>Home</span>
-        </a>
-        <a href="explore.html">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span>Explore</span>
-        </a>
-        <a href="bookings.html">
-            <i class="fa-solid fa-calendar-check"></i>
-            <span>Bookings</span>
-        </a>
-        <a href="saved.html">
-            <i class="fa-solid fa-heart"></i>
-            <span>Saved</span>
-        </a>
-        <a href="rewards.html">
-            <i class="fa-solid fa-star"></i>
-            <span>Rewards</span>
-        </a>
-        <!-- MOVED HERE: Notifications and Menu -->
-        <button class="icon-btn toolbar-icon"><i class="fa-regular fa-bell"></i></button>
-        <button class="icon-btn toolbar-icon"><i class="fa-solid fa-bars"></i></button>
-        <a href="profile.html">
-            <img src="profile.photo.png" alt="Profile" class="toolbar-avatar">
-            <span>Profile</span>
-        </a>
-    </nav>
+:root {
+    --bg-dark: #0B0410;
+    --bg-panel: rgba(26, 11, 46, 0.85);
+    --bg-input: rgba(26, 26, 36, 0.8);
+    --border-color: #1a1a24;
+    --neon-red: #ff003c;
+    --neon-pink: #d946ef;
+    --neon-blue: #00E5FF;
+    --neon-purple: #8b5cf6;
+    --neon-green: #00ff88;
+    --text-main: #ffffff;
+    --text-muted: #888899;
+    --text-dark: #666677;
+    --glow-red: 0 0 15px rgba(255, 0, 60, 0.6);
+    --glow-pink: 0 0 15px rgba(217, 70, 239, 0.4);
+    --glow-blue: 0 0 15px rgba(0, 229, 255, 0.3);
+    --font-main: 'Outfit', sans-serif;
+    --font-bungee: 'Bungee', cursive;
+    --font-caveat: 'Caveat', cursive;
+    --font-original: 'Original Surfer', cursive;
+}
 
-    <!-- 2. SEARCH BAR -->
-    <div class="search-container-top">
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" placeholder="Search for restaurants, barbers, salons...">
-        <button class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
-    </div>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <!-- 3. HERO SECTION -->
-    <header class="hero-section">
-        <!-- Hero Top Bar (Profile Only) -->
-        <div class="hero-top-bar">
-            <div class="user-profile-badge">
-                <!-- BIGGER PROFILE PICTURE -->
-                <img src="profile.photo.png" alt="User" class="hero-avatar">
-                <div class="user-info">
-                    <span class="user-name">Diamond Carter</span>
-                    <span class="user-points">👑 425 pts</span>
-                </div>
-            </div>
-        </div>
+body {
+    background: linear-gradient(rgba(11, 4, 16, 0.85), rgba(11, 4, 16, 0.95)), url('asset2.png') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-main); font-family: var(--font-main);
+    padding-top: 70px; padding-bottom: 100px; -webkit-font-smoothing: antialiased;
+}
 
-        <!-- Hero Center Content -->
-        <div class="hero-content">
-            <!-- LOGO CENTERED AT TOP -->
-            <img src="header.image.png" alt="Booked Logo" class="hero-main-logo">
-            
-            <h2 class="hero-main-text">Discover the people and places that help you <span>feel your best.</span></h2>
-            
-            <div class="hero-caveat-text">
-                <!-- MATCHING FONT, REGULAR CASE, BLUE ITALIC FOR MATTERS MOST, WITH !! -->
-                <h3 class="matters-font">Make time for what <span class="blue-italic">matters most!!</span></h3>
-                <p class="all-blue-text">
-                    <span>Real People.</span> 
-                    <span>Real Services.</span> 
-                    <span>In Real Time.</span>
-                </p>
-            </div>
-        </div>
-    </header>
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+img { max-width: 100%; display: block; }
+.scroll-x::-webkit-scrollbar { display: none; }
+.scroll-x { -ms-overflow-style: none; scrollbar-width: none; }
 
-    <main>
-        <!-- FLASH DEALS (Bungee Font) -->
-        <section class="section-block">
-            <div class="section-header">
-                <div class="section-title-group">
-                    <i class="fa-solid fa-bolt section-icon neon-pink-icon"></i>
-                    <h3 class="section-title bungee-title">
-                        <span class="gray-text">FL</span><span class="blue-text">ASH</span> <span class="pink-text underline">DEALS</span>
-                    </h3>
-                    <span class="section-subtitle">Limited time. Big savings.</span>
-                </div>
-                <a href="explore.html" class="see-all">See All ></a>
-            </div>
-            <div class="scroll-x">
-                <a href="business.html" class="deal-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Barbershop">
-                        <span class="badge-discount">36% OFF</span>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header-row"><h4>The Cut Barbershop</h4><span class="distance">📍 1.1 mi</span></div>
-                        <p class="service-name">Signature Cut</p>
-                        <div class="price-row">
-                            <div class="price-group"><span class="price">$29</span><span class="old-price">$45</span></div>
-                            <span class="timer">⏱ 2h 18m left</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="business.html" class="deal-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Nails">
-                        <span class="badge-discount">50% OFF</span>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header-row"><h4>Nail Luxe</h4><span class="distance">📍 1.8 mi</span></div>
-                        <p class="service-name">Gel Manicure</p>
-                        <div class="price-row">
-                            <div class="price-group"><span class="price">$40</span><span class="old-price">$65</span></div>
-                            <span class="timer">⏱ 3h 12m left</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="business.html" class="deal-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
-                        <span class="badge-discount">50% OFF</span>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header-row"><h4>Equinox Fitness</h4><span class="distance">📍 2.4 mi</span></div>
-                        <p class="service-name">Guest Pass</p>
-                        <div class="price-row">
-                            <div class="price-group"><span class="price">$25</span><span class="old-price">$50</span></div>
-                            <span class="timer">⏱ 5h 40m left</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
+/* TOP TOOLBAR */
+.top-toolbar {
+    position: fixed; top: 0; left: 0; width: 100%; height: 65px;
+    background-color: rgba(6, 6, 11, 0.95); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    display: flex; align-items: center; justify-content: space-around; z-index: 1000;
+    padding: 0 5px;
+}
+.top-toolbar a, .top-toolbar .toolbar-icon {
+    color: var(--text-dark); font-size: 10px; font-weight: 600;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    transition: all 0.3s ease; text-decoration: none;
+    padding: 6px 8px; border-radius: 12px;
+}
+.top-toolbar a i, .top-toolbar .toolbar-icon i { font-size: 20px; transition: all 0.3s ease; }
+.toolbar-avatar { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; border: 2px solid var(--neon-pink); box-shadow: 0 0 8px rgba(217, 70, 239, 0.5); }
 
-        <!-- BOOK SOMETHING (Bungee Font) -->
-        <section class="section-block">
-            <div class="section-header">
-                <div class="section-title-group">
-                    <i class="fa-solid fa-calendar-check section-icon neon-pink-icon"></i>
-                    <h3 class="section-title bungee-title">
-                        <span class="blue-text">BOOK</span> <span class="pink-text">SOMETHING</span>
-                    </h3>
-                </div>
-            </div>
-            <div class="category-grid">
-                <a href="category.html?type=restaurants" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Restaurants">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🍽️</span><span class="cat-arrow">></span></div>
-                        <h4>RESTAURANTS</h4><p>Great food. Good vibes.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=barbershops" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=500&q=80" alt="Barber Shops">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">✂️</span><span class="cat-arrow">></span></div>
-                        <h4>BARBER SHOPS</h4><p>Look good. Feel good.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=nailsalons" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Nail Salons">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">💅</span><span class="cat-arrow">></span></div>
-                        <h4>NAIL SALONS</h4><p>Nails. Beauty. Confidence.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=fitness" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🏋️</span><span class="cat-arrow">></span></div>
-                        <h4>FITNESS</h4><p>Stronger. Healthier. You.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=spa" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80" alt="Spa">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🧘</span><span class="cat-arrow">></span></div>
-                        <h4>SPA & WELLNESS</h4><p>Relax. Rejuvenate. Repeat.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=entertainment" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=500&q=80" alt="Entertainment">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🎵</span><span class="cat-arrow">></span></div>
-                        <h4>ENTERTAINMENT</h4><p>Live. Local. Unforgettable.</p>
-                    </div>
-                </a>
-                <a href="category.html?type=shopping" class="category-card">
-                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=500&q=80" alt="Shopping">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🛍️</span><span class="cat-arrow">></span></div>
-                        <h4>SHOPPING</h4><p>Style. Brands. You.</p>
-                    </div>
-                </a>
-                <a href="#" class="category-card" style="opacity: 0.6;">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80" alt="Hotels">
-                    <div class="category-overlay">
-                        <div class="cat-header"><span class="cat-icon-badge">🏨</span><span class="cat-arrow">></span></div>
-                        <h4>HOTELS & SUITES</h4><p style="color: var(--neon-pink); font-size: 8px;">COMING SOON</p>
-                    </div>
-                </a>
-            </div>
-        </section>
+/* PROFILE LINK WITH NAME + POINTS IN TOOLBAR */
+.toolbar-profile-link {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 4px 10px 4px 4px !important;
+    background: rgba(26, 26, 36, 0.6);
+    border-radius: 30px;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+}
+.toolbar-user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    line-height: 1.2;
+}
+.toolbar-user-name {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-main);
+    white-space: nowrap;
+}
+.toolbar-user-points {
+    font-size: 9px;
+    font-weight: 700;
+    color: #ffcc00;
+    white-space: nowrap;
+}
 
-        <!-- POPULAR NEAR YOU (Bungee Font) -->
-        <section class="section-block">
-            <div class="section-header">
-                <div class="section-title-group">
-                    <i class="fa-solid fa-fire section-icon neon-pink-icon"></i>
-                    <h3 class="section-title bungee-title">
-                        <span class="blue-text">POPULAR</span> <span class="pink-text">NEAR YOU</span>
-                    </h3>
-                </div>
-                <a href="explore.html" class="see-all">See All ></a>
-            </div>
-            <div class="scroll-x">
-                <a href="business.html" class="popular-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Barbershop">
-                        <button class="heart-btn">♡</button>
-                    </div>
-                    <div class="card-content">
-                        <h4>The Cut Barbershop</h4><p class="category-label">Barber Shop</p>
-                        <div class="meta-row"><span class="rating">⭐ 4.8 (1.2k)</span><span class="distance">📍 1.1 mi</span></div>
-                    </div>
-                </a>
-                <a href="business.html" class="popular-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Nails">
-                        <button class="heart-btn">♡</button>
-                    </div>
-                    <div class="card-content">
-                        <h4>Nails by Luxe</h4><p class="category-label">Nail Salon</p>
-                        <div class="meta-row"><span class="rating">⭐ 4.7 (642)</span><span class="distance">📍 1.8 mi</span></div>
-                    </div>
-                </a>
-                <a href="business.html" class="popular-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80" alt="Fitness">
-                        <button class="heart-btn">♡</button>
-                    </div>
-                    <div class="card-content">
-                        <h4>Equinox Fitness</h4><p class="category-label">Fitness</p>
-                        <div class="meta-row"><span class="rating">⭐ 4.6 (932)</span><span class="distance">📍 2.6 mi</span></div>
-                    </div>
-                </a>
-                <a href="business.html" class="popular-card">
-                    <div class="card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=500&q=80" alt="Restaurant">
-                        <button class="heart-btn">♡</button>
-                    </div>
-                    <div class="card-content">
-                        <h4>STK Steakhouse</h4><p class="category-label">Restaurant</p>
-                        <div class="meta-row"><span class="rating">⭐ 4.8 (1.5k)</span><span class="distance">📍 2.3 mi</span></div>
-                    </div>
-                </a>
-            </div>
-        </section>
+.top-toolbar a.active {
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2), inset 0 0 10px rgba(0, 229, 255, 0.1);
+}
+.top-toolbar a.active i {
+    color: var(--neon-blue);
+    filter: drop-shadow(0 0 8px var(--neon-blue));
+    transform: scale(1.1);
+}
+.top-toolbar a.active span { color: var(--text-main); text-shadow: 0 0 8px var(--neon-blue); }
 
-        <!-- FOOTER BANNER -->
-        <div class="footer-banner">
-            <div class="footer-content">
-                <!-- ALL WHITE -->
-                <p class="footer-brand-text">
-                    <span class="white-text">Find it.</span> 
-                    <span class="white-text">Choose it.</span> 
-                    <span class="white-text">Book it.</span>
-                </p>
-                <!-- BLUE, ITALICIZED, CAPITALIZED S AND N -->
-                <p class="discover-text">Discover Something New</p>
-            </div>
-        </div>
-    </main>
+/* SEARCH BAR */
+.search-container-top {
+    display: flex; align-items: center; background-color: var(--bg-input);
+    border-radius: 30px; padding: 5px 5px 5px 15px;
+    border: 1px solid rgba(0, 229, 255, 0.3); box-shadow: inset 0 0 10px rgba(0, 229, 255, 0.1);
+    backdrop-filter: blur(10px);
+    max-width: 90%; width: 100%; margin: 20px auto 0 auto;
+}
+.search-icon { color: var(--neon-blue); margin-right: 10px; font-size: 16px; }
+.search-container-top input { flex: 1; background: transparent; border: none; color: var(--text-main); font-size: 13px; outline: none; }
+.search-container-top input::placeholder { color: var(--text-muted); }
+.search-btn {
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+    color: white; border-radius: 50%; width: 40px; height: 40px;
+    display: flex; justify-content: center; align-items: center; box-shadow: var(--glow-pink);
+}
 
-    <!-- VIBE CHAT BUTTON -->
-    <button class="vibe-chat-btn" id="vibeChatBtn"><i class="fa-solid fa-comment-dots"></i><span>Vibe Chat</span></button>
+/* HERO SECTION */
+.hero-section {
+    position: relative; padding: 20px; text-align: center;
+    background: linear-gradient(180deg, rgba(6, 6, 11, 0.1) 0%, rgba(6, 6, 11, 0.7) 50%, rgba(6, 6, 11, 1) 100%), url('asset1.png');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    display: flex; flex-direction: column; justify-content: center;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+}
 
-    <!-- VIBE CHAT MODAL -->
-    <div class="chat-modal" id="chatModal">
-        <div class="chat-container">
-            <div class="chat-header">
-                <h3>Vibe Chat</h3>
-                <button class="close-chat" id="closeChatBtn">✕</button>
-            </div>
-            <div class="chat-messages" id="chatMessages">
-                <div class="message ai-message">Hi Diamond! I'm your Vibe assistant. How can I help you today? You can ask me to book an appointment, check your bookings, or find deals.</div>
-            </div>
-            <div class="chat-input-area">
-                <input type="text" id="chatInput" placeholder="Ask me to book an appointment...">
-                <button id="sendChatBtn">➔</button>
-            </div>
-        </div>
-    </div>
+/* Hero Center Content */
+.hero-content { margin-bottom: 20px; display: flex; flex-direction: column; align-items: center; }
+.hero-main-logo {
+    width: 100%; max-width: 200px; margin: 0 auto 15px auto;
+    mix-blend-mode: screen; filter: drop-shadow(0 0 15px rgba(217, 70, 239, 0.6));
+}
+.hero-main-text {
+    font-family: var(--font-main);
+    font-size: 16px; font-weight: 600; line-height: 1.4;
+    margin: 0 auto 20px auto; max-width: 320px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+.hero-main-text span { color: var(--neon-blue); font-weight: 800; font-style: italic; }
 
-    <script src="state.js"></script>
-    <script src="router.js"></script>
-    <script src="app.js"></script>
-</body>
-</html>
+/* "Make time for what matters most!!" */
+.hero-caveat-text { margin-top: 15px; }
+.matters-font {
+    font-family: var(--font-original);
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.9);
+}
+.blue-italic { color: var(--neon-blue); font-style: italic; font-weight: 800; text-shadow: 0 0 10px var(--neon-blue); }
+
+.all-blue-text {
+    font-family: var(--font-caveat);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* SECTIONS & CARDS */
+.section-block { padding: 15px 0; }
+.section-header { display: flex; justify-content: space-between; align-items: flex-end; padding: 0 20px; margin-bottom: 15px; }
+.section-title-group { display: flex; align-items: center; gap: 8px; }
+.section-icon { font-size: 22px; color: var(--neon-pink); filter: drop-shadow(0 0 8px var(--neon-pink)); }
+
+/* BUNGEE FONT FOR SECTION TITLES */
+.bungee-title { font-family: var(--font-bungee); font-size: 24px; font-weight: 400; letter-spacing: 1px; margin-top: 0; line-height: 1; }
+
+.gray-text { color: var(--text-dark); }
+.blue-text { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
+.pink-text { color: var(--neon-pink); text-shadow: 0 0 10px var(--neon-pink); }
+.white-text { color: #ffffff !important; }
+.underline { text-decoration: underline; text-decoration-color: var(--neon-pink); text-underline-offset: 4px; }
+
+.section-subtitle { font-size: 11px; color: var(--text-muted); font-style: italic; font-weight: 600; }
+.see-all { color: var(--neon-blue); font-size: 12px; font-weight: 700; }
+.scroll-x { display: flex; overflow-x: auto; gap: 15px; padding: 0 20px 10px 20px; }
+
+.deal-card, .popular-card {
+    min-width: 220px; max-width: 240px; background-color: var(--bg-panel); border-radius: 16px;
+    overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+.card-image-wrapper { position: relative; height: 110px; }
+.card-image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.badge-discount {
+    position: absolute; top: 8px; left: 8px;
+    background: linear-gradient(135deg, var(--neon-red), #b3002a);
+    color: white; padding: 3px 8px; border-radius: 12px;
+    font-size: 10px; font-weight: 800; box-shadow: var(--glow-red);
+}
+.heart-btn {
+    position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.5);
+    color: white; width: 28px; height: 28px; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; font-size: 16px; backdrop-filter: blur(4px);
+}
+.card-content { padding: 12px; }
+.card-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.card-header-row h4 { font-size: 14px; font-weight: 700; }
+.distance { font-size: 10px; color: var(--text-muted); }
+.service-name, .category-label { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+.price-row { display: flex; justify-content: space-between; align-items: flex-end; }
+.price { font-size: 16px; font-weight: 800; color: var(--neon-green); }
+.old-price { font-size: 12px; color: var(--text-dark); text-decoration: line-through; margin-left: 4px; }
+.timer { font-size: 10px; color: var(--neon-blue); background: rgba(0, 229, 255, 0.1); padding: 2px 6px; border-radius: 10px; font-weight: 700; }
+
+/* CATEGORY GRID */
+.category-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 20px; }
+.category-card {
+    position: relative; border-radius: 12px; overflow: hidden; height: 110px;
+    border: 1px solid rgba(0, 229, 255, 0.4); box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
+}
+.category-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
+.category-overlay {
+    position: absolute; bottom: 0; left: 0; width: 100%; padding: 8px 10px;
+    background: linear-gradient(0deg, rgba(6,6,11,1) 0%, rgba(6,6,11,0.8) 60%, rgba(6,6,11,0) 100%);
+    display: flex; flex-direction: column; gap: 2px;
+}
+.cat-header { display: flex; justify-content: space-between; align-items: center; }
+.cat-icon-badge { font-size: 14px; }
+.cat-arrow { color: var(--neon-blue); font-weight: 800; font-size: 12px; }
+.category-overlay h4 { font-size: 10px; font-weight: 800; text-transform: uppercase; color: var(--text-main); margin-top: 2px; }
+.category-overlay p { font-size: 9px; color: var(--text-muted); }
+
+/* FOOTER BANNER */
+.footer-banner {
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(180deg, rgba(11, 4, 16, 0.2) 0%, rgba(11, 4, 16, 0.85) 100%), url('footer.image.png') no-repeat center bottom;
+    background-size: cover;
+    min-height: 250px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    margin-top: 20px; border-top: 1px solid rgba(217, 70, 239, 0.5);
+}
+.footer-content { position: relative; z-index: 2; width: 100%; max-width: 500px; }
+
+.footer-brand-text {
+    font-family: 'Antic Slab', serif;
+    font-size: 26px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.9);
+}
+
+.discover-text {
+    font-family: 'Antic Slab', serif;
+    font-size: 16px !important;
+    color: var(--neon-blue) !important;
+    margin-top: 5px !important;
+    font-weight: 700 !important;
+    font-style: italic !important;
+    text-transform: capitalize;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.9);
+}
+
+/* VIBE CHAT BUTTON */
+.vibe-chat-btn {
+    position: fixed; bottom: 20px; right: 20px;
+    background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+    color: white; padding: 12px 20px; border-radius: 30px;
+    display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 14px;
+    box-shadow: 0 0 25px rgba(217, 70, 239, 0.8); z-index: 999;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.vibe-chat-btn i { font-size: 16px; }
+
+/* VIBE CHAT MODAL */
+.chat-modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7); backdrop-filter: blur(5px);
+    z-index: 2000; display: none; justify-content: center; align-items: flex-end;
+}
+.chat-modal.active { display: flex; }
+.chat-container {
+    width: 100%; max-width: 500px; height: 75vh; background: var(--bg-panel);
+    border-top-left-radius: 24px; border-top-right-radius: 24px;
+    border: 1px solid var(--neon-pink); border-bottom: none;
+    display: flex; flex-direction: column;
+    box-shadow: 0 -10px 40px rgba(217, 70, 239, 0.4);
+    animation: slideUp 0.3s ease-out;
+}
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.chat-header { padding: 15px 20px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
+.chat-header h3 { font-size: 18px; font-weight: 800; color: var(--neon-pink); }
+.close-chat { color: var(--text-muted); font-size: 18px; font-weight: 800; }
+.chat-messages { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; }
+.message { max-width: 80%; padding: 12px 16px; border-radius: 16px; font-size: 14px; line-height: 1.4; font-weight: 500; }
+.ai-message { background: rgba(139, 92, 246, 0.2); border: 1px solid var(--neon-purple); align-self: flex-start; border-bottom-left-radius: 4px; }
+.user-message { background: rgba(0, 229, 255, 0.15); border: 1px solid var(--neon-blue); align-self: flex-end; border-bottom-right-radius: 4px; color: #fff; }
+.chat-input-area { padding: 15px 20px; border-top: 1px solid var(--border-color); display: flex; gap: 10px; background: rgba(6, 6, 11, 0.9); border-bottom-left-radius: 24px; border-bottom-right-radius: 24px; }
+.chat-input-area input { flex: 1; background: rgba(26, 26, 36, 0.8); border: 1px solid var(--border-color); padding: 12px 15px; border-radius: 20px; color: white; outline: none; font-family: inherit; }
+.chat-input-area button { background: var(--neon-pink); color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 18px; box-shadow: var(--glow-pink); }
+
+@media (min-width: 768px) {
+    body { max-width: 900px; margin: 0 auto; border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); box-shadow: 0 0 50px rgba(0,0,0,0.8); }
+    .top-toolbar { max-width: 900px; left: 50%; transform: translateX(-50%); border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); }
+    .vibe-chat-btn { right: calc(50% - 430px); }
+    .category-grid { grid-template-columns: repeat(4, 1fr); }
+}
