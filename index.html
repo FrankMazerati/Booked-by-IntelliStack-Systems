@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booked - Home</title>
-    <!-- Font Awesome for Toolbar & Section Icons -->
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- 1. FIXED TOP TOOLBAR -->
+    <!-- 1. FIXED TOP TOOLBAR (Logo Removed) -->
     <nav class="top-toolbar">
-        <div class="toolbar-left">
-            <img src="header.image.png" alt="Booked Logo" class="toolbar-logo">
-        </div>
-        
         <a href="index.html" class="active">
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
@@ -52,9 +48,11 @@
 
     <!-- 3. HERO SECTION -->
     <header class="hero-section">
-        <!-- Hero Top Bar (Profile, Logo, Icons) -->
+        <!-- Hero Top Bar (Profile, Name, Points, Notification, Menu) -->
         <div class="hero-top-bar">
             <div class="user-profile-badge">
+                <!-- BIGGER PROFILE PICTURE -->
+                <img src="profile.photo.png" alt="User" class="hero-avatar">
                 <div class="user-info">
                     <span class="user-name">Diamond Carter</span>
                     <span class="user-points">👑 425 pts</span>
@@ -62,7 +60,6 @@
             </div>
             
             <div class="hero-actions">
-                <img src="header.image.png" alt="Booked Logo" class="hero-top-logo">
                 <button class="icon-btn"><i class="fa-regular fa-bell"></i></button>
                 <button class="icon-btn"><i class="fa-solid fa-bars"></i></button>
             </div>
@@ -70,10 +67,14 @@
 
         <!-- Hero Center Content -->
         <div class="hero-content">
-            <h2>Discover the people and places that help you <span>feel your best.</span></h2>
+            <!-- BIGGER LOGO IN THE CENTER -->
+            <img src="header.image.png" alt="Booked Logo" class="hero-main-logo">
+            
+            <h2 class="hero-main-text">Discover the people and places that help you <span>feel your best.</span></h2>
             
             <div class="hero-caveat-text">
-                <h3 class="matters-font">Make time for what <span class="blue-italic">MATTERS MOST!!</span></h3>
+                <!-- SAME FONT AS ABOVE, REGULAR CASE, BLUE ITALIC FOR MATTERS MOST -->
+                <h3 class="matters-font">Make time for what <span class="blue-italic">matters most</span></h3>
                 <p class="all-blue-text">
                     <span>Real People.</span> 
                     <span>Real Services.</span> 
@@ -84,7 +85,7 @@
     </header>
 
     <main>
-        <!-- FLASH DEALS (Font Awesome Bolt) -->
+        <!-- FLASH DEALS (Bungee Font) -->
         <section class="section-block">
             <div class="section-header">
                 <div class="section-title-group">
@@ -142,7 +143,7 @@
             </div>
         </section>
 
-        <!-- BOOK SOMETHING (Font Awesome Calendar) -->
+        <!-- BOOK SOMETHING (Bungee Font) -->
         <section class="section-block">
             <div class="section-header">
                 <div class="section-title-group">
@@ -212,7 +213,7 @@
             </div>
         </section>
 
-        <!-- POPULAR NEAR YOU (Font Awesome Fire) -->
+        <!-- POPULAR NEAR YOU (Bungee Font) -->
         <section class="section-block">
             <div class="section-header">
                 <div class="section-title-group">
@@ -270,12 +271,14 @@
         <!-- FOOTER BANNER -->
         <div class="footer-banner">
             <div class="footer-content">
+                <!-- ALL WHITE -->
                 <p class="footer-brand-text">
-                    <span class="find-text">Find it.</span> 
-                    <span class="choose-text">Choose it.</span> 
-                    <span class="book-text">Book it.</span>
+                    <span class="white-text">Find it.</span> 
+                    <span class="white-text">Choose it.</span> 
+                    <span class="white-text">Book it.</span>
                 </p>
-                <p class="discover-text">Discover something new.</p>
+                <!-- BLUE, ITALICIZED, CAPITALIZED S AND N -->
+                <p class="discover-text">Discover Something New</p>
             </div>
         </div>
     </main>
