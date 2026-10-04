@@ -1,8 +1,8 @@
-/* IMPORTING ALL FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Caveat:wght@400;700&family=Original+Surfer&family=Outfit:wght@300;400;600;800;900&display=swap');
+/* IMPORTING ALL FONTS (Wellfleet replaces Bungee) */
+@import url('https://fonts.googleapis.com/css2?family=Wellfleet&family=Caveat:wght@400;700&family=Original+Surfer&family=Outfit:wght@300;400;600;800;900&display=swap');
 
 :root {
-    --bg-dark: #0B0410;
+    --bg-neon-purple: #8b5cf6;
     --bg-panel: rgba(26, 11, 46, 0.85);
     --bg-input: rgba(26, 26, 36, 0.8);
     --border-color: #1a1a24;
@@ -18,7 +18,7 @@
     --glow-pink: 0 0 15px rgba(217, 70, 239, 0.4);
     --glow-blue: 0 0 15px rgba(0, 229, 255, 0.3);
     --font-main: 'Outfit', sans-serif;
-    --font-bungee: 'Bungee', cursive;
+    --font-wellfleet: 'Wellfleet', serif;
     --font-caveat: 'Caveat', cursive;
     --font-original: 'Original Surfer', cursive;
 }
@@ -47,7 +47,7 @@ img { max-width: 100%; display: block; }
 .scroll-x { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* ========================================== */
-/* TOP TOOLBAR (Floating, Transparent)        */
+/* TOP TOOLBAR                                */
 /* ========================================== */
 .top-toolbar {
     position: fixed;
@@ -87,7 +87,6 @@ img { max-width: 100%; display: block; }
     transition: all 0.3s ease;
 }
 
-/* Home is NEON PINK */
 .top-toolbar > a.active {
     color: var(--neon-pink);
     text-shadow: 0 0 8px var(--neon-pink);
@@ -167,7 +166,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ========================================== */
-/* HERO SECTION (Full picture, stretches top) */
+/* HERO SECTION                               */
 /* ========================================== */
 .hero-section {
     position: relative;
@@ -231,13 +230,15 @@ img { max-width: 100%; display: block; }
     filter: drop-shadow(0 0 10px var(--neon-pink));
 }
 
-/* BUNGEE FONT FOR ALL SECTION TITLES */
+/* ========================================== */
+/* WELLFLEET FONT FOR ALL SECTION TITLES      */
+/* ========================================== */
 .bungee-title {
-    font-family: var(--font-bungee);
+    font-family: var(--font-wellfleet);
     font-size: 24px;
     font-weight: 400;
-    letter-spacing: 1px;
-    line-height: 1;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
 }
 
 .gray-text { color: var(--text-dark); }
@@ -292,7 +293,7 @@ img { max-width: 100%; display: block; }
     padding: 2px 6px; border-radius: 10px; font-weight: 700;
 }
 
-/* CATEGORY GRID (Neon Bordered) */
+/* CATEGORY GRID */
 .category-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 20px; }
 .category-card {
     position: relative; border-radius: 12px; overflow: hidden; height: 110px;
@@ -334,15 +335,19 @@ img { max-width: 100%; display: block; }
     line-height: 1.2;
     text-shadow: 0 2px 5px rgba(0,0,0,0.9);
 }
+
+/* ========================================== */
+/* DISCOVER SOMETHING NEW - WHITE             */
+/* ========================================== */
 .discover-text {
     font-family: 'Antic Slab', serif;
     font-size: 16px !important;
-    color: var(--neon-blue) !important;
+    color: #ffffff !important;
     margin-top: 5px !important;
     font-weight: 700 !important;
     font-style: italic !important;
     text-transform: capitalize;
-    text-shadow: 0 0 10px var(--neon-blue);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.9);
 }
 
 /* ========================================== */
